@@ -1,0 +1,14 @@
+<h1>Browser</h1>
+<form action="/search" method="POST">
+  <input type="text" class="search" name="search" placeholder="Search...">
+  <input type="number" name="from" min="1" max="10000" class="difficulty" placeholder="Price from...">
+  <span>-</span>
+  <input type="number" name="to" min="1" max="10000" class="difficulty" placeholder="Price to...">
+  <input type="submit" value="search">
+</form>
+
+{{#each products}}
+  {{> product}}
+{{else}}
+  <h2>No products found</h2>
+{{/each}}

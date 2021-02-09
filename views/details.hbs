@@ -1,0 +1,25 @@
+
+<h1>{{name}}</h1>
+<img class="product" src="{{imageUrl}}">
+<div class="details">
+    <p><span>Description:</span>{{description}}</p>
+    <p><span>Price:</span> {{price}} BGN</p>
+    {{#if isCreator}}
+    <a class="btn" href="/attach/accessory/{{_id}}">Attach Accessory</a>
+    <a class="btn" href="/edit/{{_id}}">Edit</a>
+    {{/if}}
+</div>
+<h2>Accessories</h2>
+<div class="accessories">
+  {{#each accessories}}
+    <div class="accessory">
+        <img src="{{this.imageUrl}}" alt="stickerName">
+        <h3>{{this.name}}</h3>
+        <p>{{this.description}}</p>
+    </div>
+
+  {{else}}
+    <h3 class="italic">This product has no accessories yet...</h3>
+  {{/each}}
+    
+</div>
